@@ -11,8 +11,11 @@ export class CFAHomePage extends BasePage {
    signInLink: By = By.xpath('//form[@id="toolbar-menu-signin"]/button');
    orderFoodBtn: By = By.xpath('//a[@href="/order"]');
    searchBtn: By = By.css('.icon-search-off');
-   searchField: By = By.id('keyword');
+   searchField: By = By.name("query")
    searchClose: By = By.css('.icon-close');
+   glutenFree: By = By.xpath('(//h3[contains(text(),"gluten-free")])[1]')
+   giftCard: By = By.xpath('(//h3[contains(text(),"gift card")])[1]')
+
 
     constructor(driver: WebDriver) {
         super(driver);
