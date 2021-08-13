@@ -85,6 +85,12 @@ export class BasePage {
         return element.getAttribute(attr);
     }
     /**
+     * Maximize the driver window
+     */
+     async maxWindow() {
+        await this.driver.manage().window().maximize();
+    }
+    /**
      * This method terminates the driver
      */
     async quit() {
